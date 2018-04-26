@@ -1,0 +1,1972 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- D3 -->
+    <script src="d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116334129-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+     
+       gtag('config', 'UA-116334129-1');
+     </script>
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">La percée du Front National en 2017</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+
+        </div>-->
+      </nav>
+    </header>
+
+    <main role="main">
+		<script>
+			// VARIABLES GLOBALES
+			var COLOR_LEPEN = "#592B87"; //"#CD84FA";
+			var COLOR_MACRON = "#FF7D15"; //"#FAA43C";
+			var COLOR_FILLON = "#4F69FF"; //"#52A2F7";
+			var COLOR_HAMON = "#FF9793"; //"#FA98EA";
+			var COLOR_MELENCHON = "#D30000";//"#F76252";
+			var COLOR_NEUTRE = "#777777"; //"#343A40";
+			var COLOR_CARTE = COLOR_LEPEN; //"#343A40";
+		</script>
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="background_1.png" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1></h1>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="background_2.jpg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1></h1>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+               <!--  <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="background_3.jpg" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1></h1>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+               <!--  <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus</a></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+
+        <!-- START HEADING -->
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+              <img src="courbe_croissante.png" width="140" height="140">
+              <h2 style="font-size:190%">Quelle montée du FN ?</h2>
+             <!-- <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+              <p><a class="btn btn-lg btn-primary" href="#map_href" role="button">En savoir plus</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="qui.png" alt="Generic placeholder image" width="140" height="140">
+              <h2 style="font-size:190%">Qui vote FN ?</h2>
+            <!--  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+             <p><a class="btn btn-lg btn-primary" href="#qui_href" role="button">En savoir plus</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="pourquoi.jpg" alt="Generic placeholder image" width="140" height="140">
+              <h2 style="font-size:190%">Pourquoi vote t-on FN ?</h2>
+            <!--  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+            <p><a class="btn btn-lg btn-primary" href="#pourquoi_href" role="button">En savoir plus</a></p>
+            </div><!-- /.col-lg-4 -->
+  
+          </div><!-- /.row -->
+
+
+          <hr class="featurette-divider">
+
+        <p class="lead" style="text-align:justify">
+        Aux élections présidentielles françaises de 2017, Emmanuel Macron est élu avec 66,1% des votes exprimés et devient le huitième président de la cinquième République. Son adversaire, Marine Le Pen, est créditée de 33,9% des votes. Beaucoup ont été surpris de voir Marine Le Pen (candidate d’un parti d’extrême droite) arriver au deuxième tour des élections et recueillir autant de votes.  
+                   <br>    <br>      
+        Découvrez comment ce résultat peut être expliqué. Vous saurez tout sur le score du FN grâce à nos nombreuses données : données économiques , sociologiques, mots employés pendant les discours...
+        </p>
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"  style="text-align:justify;width:550px">Un  électeur sur cinq vote Le Pen au premier tour.</span></h2>
+            <p class="lead"  style="text-align:justify;width:550px">Marine Le pen (21.3%) et Emmanuel Macron (24.01%) sont en tête du premier tour des élections présidentielles 2017.
+                C’est la deuxième fois que le FN accède au second tour. Pensez-vous que ce résultat était prévisible ?
+            </p>
+              </div>
+          <div class="col-md-5" id ="chartID" style="left:-85px">
+
+              <style scoped>
+                  .axis path, .axis line {
+                    fill: none;
+                    stroke: #fff;
+                  }
+                  .axis text {
+                    font-size: 13px;
+                  }
+                  .bar {
+                  }
+                  .bar:hover {
+                  }
+
+                #chartID {
+                  min-width: 531px;
+                }
+                </style>
+                
+                <script>
+                                  
+                    function shadeColor(color, percent) {
+
+						var R = parseInt(color.substring(1,3),16);
+						var G = parseInt(color.substring(3,5),16);
+						var B = parseInt(color.substring(5,7),16);
+
+						R = parseInt(R * (100 + percent) / 100);
+						G = parseInt(G * (100 + percent) / 100);
+						B = parseInt(B * (100 + percent) / 100);
+
+						R = (R<255)?R:255;  
+						G = (G<255)?G:255;  
+						B = (B<255)?B:255;  
+
+						var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
+						var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
+						var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+
+						return "#"+RR+GG+BB;
+					}
+					
+                    var data_cl = [
+					{"food":"Macron","quantity":24.01,"color":COLOR_MACRON},
+					{"food":"Le Pen","quantity":21.30,"color":COLOR_LEPEN},
+					{"food":"Fillon","quantity":20.01,"color":COLOR_FILLON},
+					{"food":"Mélenchon","quantity":19.58,"color":COLOR_MELENCHON},
+					{"food":"Hamon","quantity":6.36,"color":COLOR_HAMON}
+					];
+                    
+                    var margin_cl = {top:80, right:200, bottom:200, left:200};
+                    
+                    var width_cl = 900 - margin_cl.left - margin_cl.right;
+                    
+                    var height_cl = 450 - margin_cl.top - margin_cl.bottom;
+                    
+                    var xScale_cl = d3.scale.ordinal().rangeRoundBands([0, width_cl], .03)
+                    
+                    var yScale_cl = d3.scale.linear()
+                          .range([height_cl, 0]);
+                    
+                    
+                    var xAxis_cl = d3.svg.axis()
+                        .scale(xScale_cl)
+                        .orient("bottom");
+                          
+                          
+                    var yAxis_cl = d3.svg.axis()
+                        .scale(yScale_cl)
+                        .orient("left");
+                    
+                    var svgContainer_cl = d3.select("#chartID").append("svg").attr("class", 'cl')
+                        .attr("width", width_cl + 25)
+                        .attr("height",300)
+                        .append("g").attr("class", "container")
+                        .attr("transform", "translate("+ 40 +","+ 130 +")");
+                    
+                    xScale_cl.domain(data_cl.map(function(d) { return d.food; }));
+                    yScale_cl.domain([0, d3.max(data_cl, function(d) { return d.quantity; })]);
+                          
+                    
+                      svgContainer_cl.selectAll(".bar")
+                          .data(data_cl)
+                          .enter()
+                          .append("rect")
+                          .attr("class", "bar")
+                          .attr("x", function(d) { return xScale_cl(d.food); })
+                          .attr("width", 90)
+                          .attr("y", function(d) { return yScale_cl(d.quantity); })
+                          .attr("height", function(d) { return height_cl - yScale_cl(d.quantity); })
+						  .attr("fill", function(d) { return d.color; })
+						  .on("mouseover", 
+							function(d){
+								d3.select(this)
+									.transition(1000)
+									.attr("fill", shadeColor(d.color,-50 )) })
+						  .on("mouseout", 
+							function(d){
+								d3.select(this)
+									.transition(1000)
+									.attr("fill", d.color) });
+                    
+                      svgContainer_cl.selectAll("x axis")
+                          .data(data_cl)
+                          .enter()
+                          .append("svg:image")
+                          .attr("class", "image")
+                          .attr("width", 128)
+                          .attr("height", 128)
+                          .attr("x",  function(d,i) { return -15 + 99*i ; })
+                          .attr("y", function(d) { return yScale_cl(d.quantity) - 130; })
+                          .attr('xlink:href', function(d) { return d.food + '.png'; });
+
+                    
+                    // Controls the text labels at the top of each bar. Partially repeated in the resize() function below for responsiveness.
+                    svgContainer_cl.selectAll(".text")  		
+                        .data(data_cl)
+                        .enter()
+                        .append("text")
+                        .attr("class","label")
+                        .attr("x", (function(d) { return xScale_cl(d.food) + 45; }  ))
+                        .attr("y", function(d) { return yScale_cl(d.quantity) + 1; })
+                        .attr("dy", ".75em")
+                        .text(function(d) { return d.food + ' ' + d.quantity + ' %'; });  
+                    
+
+                    
+                    function wrap(text, width_cl) {
+                      text.each(function() {
+                        var text = d3.select(this),
+                            words = text.text().split(/\s+/).reverse(),
+                            word,
+                            line = [],
+                            lineNumber = 0,
+                            lineHeight = 1.1, // ems
+                            y = text.attr("y"),
+                            dy = parseFloat(text.attr("dy")),
+                            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+                        while (word = words.pop()) {
+                          line.push(word);
+                          tspan.text(line.join(" "));
+                          if (tspan.node().getComputedTextLength() > width_cl) {
+                            line.pop();
+                            tspan.text(line.join(" "));
+                            line = [word];
+                            tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+                          }
+                        }
+                      });
+                    }
+                    
+                    </script>
+
+        </div>
+        </div>
+
+        <hr class="featurette-divider" id="map_href">
+
+        <!-- START MAP -->
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading" style="text-align:justify">Au fil des années, Le FN progresse dans tous les départements.</h2>
+            <p class="lead" style="text-align:justify">La carte représente les résultats du FN au premier tour de chaque élection présidentielle depuis 1988.
+              <br>
+              Depuis des années, le FN réalise ses meilleurs scores dans le nord-est et sur le pourtour méditerranéen.
+
+              En 2017, on constate une France coupée net avec un Nord-Est (l’Ile-de-France exclue) et un Sud-Est davantage favorable à Mme Le Pen. Dans le Pas-de-Calais, l’Oise, le Var ou le Vaucluse la présidente du FN dépasse même les 30 %.
+            </p>
+          </div>
+            <div class="col-md-5 order-md-1">
+
+              <style scoped>
+            
+                  svg.second-graph {
+                        margin-left: -50px;
+                        }
+    
+                  .county-border {
+                  fill: none;
+                  stroke: #000;
+                  pointer-events: none;
+                }
+              
+                .axis text {
+                  font: 10px sans-serif;
+                }
+              
+                .axis line, .axis path {
+                  fill: none;
+                  stroke: white;
+                  shape-rendering: crispEdges;
+                }
+              
+              
+              div.tooltip {   
+                position: absolute;         
+                text-align: left;                 
+                padding: 2px;           
+                font: 12px sans-serif;        
+                background: rgb(190, 186, 186);   
+                border: 0px;      
+                border-radius: 8px;           
+                pointer-events: none;         
+              }
+                    
+                    </style>
+                    <svg class="second-graph" width="600" height="400"></svg>
+    
+                    <input id="slider" type="range" min="0" max="5" value="0" step="1" style="width:200px;margin-left:125px;color:black";/>
+                    <span id="range" style="font-size:40px;margin-left:180px">1988</span>
+                
+                    <script>
+                  
+                onload = function() {
+                  var values = ["1988","1995","2002","2007","2012", "2017"];
+                  var $ = function(id) { return document.getElementById(id); };
+                  $('slider').oninput = function() { $('range').innerHTML = values[this.value]; };
+                  $('slider').oninput();
+                };
+                
+                
+                
+                  </script>
+                    <script>
+                
+                      //choropleth
+                      var width = 550, height = 400;
+                
+                      var value;
+                      
+                      var formatPercentage = d3.format(".2%");
+                      
+                      var div = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+                
+					  var color_min = shadeColor(COLOR_CARTE,200);
+					  var color_max = shadeColor(COLOR_CARTE,-50);
+					  
+                      var color_map = d3.scale.linear().domain([.05, .3]).range([color_min, color_max]);
+                
+                      var projection = d3.geo.conicConformal().parallels([35 + 34 / 60, 90 + 46 / 60]).rotate([0, -35 + 00 / 60]).translate([width / 2, height / 2]);
+                
+                      var path_map = d3.geo.path().projection(projection);
+                
+                      var svg_map = d3.select("svg.second-graph").append("svg").attr("width", width).attr("height", height);
+                
+                      d3.json("french_deps_topo.json", function(error, ok) {
+                        var counties = topojson.feature(ok, ok.objects.counties);
+                
+                        projection.scale(1).translate([0, 0]);
+                
+                        var b = path_map.bounds(counties), s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height), t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+                
+                        projection.scale(s).translate(t);
+                
+                        svg_map.selectAll("path").data(counties.features.filter(function(d) {
+                          return d.id;
+                        })).enter().append("path").attr("class", "county").attr("d", path_map).style("fill", function(d) {
+                          return color_map(d.properties.aught);
+                        })
+                        .on("mouseover", function (d) {
+                        div.transition()
+                        .duration(200)
+                        .style("opacity", .9);
+                        div.html(
+                          "<h2>Département: " + d.properties.county + "</h2>"
+                           + "<table><tr><th>Année</th><th>Score de l'extrême droite</th></tr>"
+                           + "<tr><td>1988</td><td>" + formatPercentage(d.properties.aught) + "</td></tr>"
+                           + "<tr><td>1995</td><td>" + formatPercentage(d.properties.one) + "</td></tr>"
+                           + "<tr><td>2002</td><td>" + formatPercentage(d.properties.two) + "</td></tr>"
+                           + "<tr><td>2007</td><td>" + formatPercentage(d.properties.three) + "</td></tr>"
+                           + "<tr><td>2012</td><td>" + formatPercentage(d.properties.four) + "</td></tr>"
+                           + "<tr><td>2017</td><td>" + formatPercentage(d.properties.five) + "</td></tr></table>"
+                
+                          )
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY) + "px")
+                      })
+                      .on("mouseout", function (d){
+                        div.transition()
+                        .duration(500)
+                        .style("opacity", 0);
+                      });
+                
+                        svg_map.append("path").datum(topojson.mesh(ok, ok.objects.counties, function(a, b) {
+                          return a !== b;
+                        })).attr("class", "county-border").attr("d", path_map);
+                
+                        d3.selectAll("input").on("change", function change() {
+                          var values = ["1988","1995","2002","2007","2012", "2017"];
+                          var value = values[this.value];
+                
+                          d3.selectAll("path").style("fill", function(d) {
+                            switch (value) {
+                              case "1988":
+                                return color_map(d.properties.aught);
+                                break;
+                              case "1995":
+                                return color_map(d.properties.one);
+                                break;
+                              case "2002":
+                                return color_map(d.properties.two);
+                                break;
+                              case "2007":
+                                return color_map(d.properties.three);
+                                break;
+                              case "2012":
+                                return color_map(d.properties.four);
+                                break;
+                              case "2017":
+                                return color_map(d.properties.five);
+                                break;
+                            }
+                          });
+                        });
+                
+                      });
+                      //end choropleth
+                
+                      //key
+                      var w = 140, h = 400;
+                
+                      var key = d3.select("svg.second-graph").append("svg").attr("id", "key").attr("width", w).attr("height", h);
+                
+                      var legend = key.append("defs").append("svg:linearGradient").attr("id", "gradient").attr("x1", "100%").attr("y1", "0%").attr("x2", "100%").attr("y2", "100%").attr("spreadMethod", "pad");
+                
+                      legend.append("stop").attr("offset", "0%").attr("stop-color", color_max).attr("stop-opacity", 1);
+                
+                      legend.append("stop").attr("offset", "100%").attr("stop-color", color_min).attr("stop-opacity", 1);
+                
+                      key.append("rect").attr("width", w - 100).attr("height", h - 100).style("fill", "url(#gradient)").attr("transform", "translate(-20,45)");
+                
+                      var y = d3.scale.linear().range([300, 0]).domain([.05, .3]);
+                      
+                      formatter = d3.format(".0%");
+                
+                      var yAxis = d3.svg.axis().scale(y).orient("right").tickFormat(formatter);
+                
+                      key.append("g").attr("class", "y axis").attr("transform", "translate(21,46)").call(yAxis).append("text").attr("transform", "rotate(-90)").attr("y", 30).attr("dy", ".71em").style("text-anchor", "end");
+                      //.text("% Hispanic");
+                      //end key
+                
+                      d3.select(self.frameElement).style("height", height + "px");
+                
+                    </script>
+
+          </div>
+        </div>
+        <!-- END MAP -->
+
+        <hr class="featurette-divider" id="qui_href">
+
+        <!-- START HABITAT -->
+
+        <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading" style="text-align:justify">Le Pen  a le vent en poupe dans les campagnes.</h2>
+              <p class="lead" style="text-align:justify">Marine Le Pen l’emporte nettement dans les zones rurales et périurbaines et les petites villes (moins de 20 000 habitants).
+
+              A Paris, Emmanuel Macron se place largement en tête avec un score de 31%. Loin dernière Fillon et Mélenchon, Marine Le Pen  recueille un faible score.
+              </p>
+              </div>
+
+        <style>
+            .ville_featurette_div {
+              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              margin: auto;
+              position: relative;
+              width: 300px;
+              right: 30px;
+            }
+          
+            text {
+              font: 10px sans-serif;
+            }
+          
+            .axis path {
+              display: none;
+            }
+          
+            .axis line {
+              fill: none;
+              stroke: #000;
+              shape-rendering: crispEdges;
+            }
+          
+            .group-label {
+              font-weight: bold;
+              text-anchor: end;
+            }
+          
+          
+            </style>
+          
+          
+                <div class="col-md-5 ville_featurette_div">
+            <form style="position:absolute;right:-36px;top:-40px;">
+              <label><input type="radio" class="input5" name="mode" value="multiples" checked> Vue par candidat </label>
+              <label><input type="radio" class="input5" name="mode" value="stacked"> Vue par lieu d'habitation </label>
+            </form>
+          
+          
+          <script>
+          
+            var parseDate_5 = d3.time.format("%Y-%m").parse,
+              formatYear_5 = d3.format("02d"),
+              formatDate_5 = function(d) { return d; };//function(d) { return "Q" + ((d.getMonth() / 3 | 0) + 1) + formatYear_5(d.getFullYear() % 100); };
+          
+            var margin_5 = {top: 30, right: 20, bottom: -40, left: 90},
+              width_5 = 600 - margin_5.left - margin_5.right,
+              height_5 = 400 - margin_5.top - margin_5.bottom;
+          
+            var y0_5 = d3.scale.ordinal()
+              .rangeRoundBands([height_5, 0], .2);
+          
+            var y1_5 = d3.scale.linear();
+          
+            var x_5 = d3.scale.ordinal()
+              .rangeRoundBands([0, width_5], .1, 0);
+          
+            var xAxis_5 = d3.svg.axis()
+              .scale(x_5)
+              .orient("bottom")
+              .tickFormat(formatDate_5);
+          
+            var nest_5 = d3.nest()
+              .key(function(d) { return d.group; });
+          
+            var stack_5 = d3.layout.stack()
+              .values(function(d) { return d.values; })
+              .x(function(d) { return d.categorie; })
+              .y(function(d) { return d.value; })
+              .out(function(d, y0_5) { d.valueOffset = y0_5; });
+          
+            var color_5 = function(e){
+				if( e=="Mélenchon"){
+					return COLOR_MELENCHON;
+				}
+				if( e=="Hamon"){
+					return COLOR_HAMON;
+				}
+				if( e=="Lepen"){
+					return COLOR_LEPEN;
+				}
+				if( e=="Macron"){
+					return COLOR_MACRON;
+				}
+				if( e=="Fillon"){
+					return COLOR_FILLON;
+				}
+				else return "#000000"};
+          
+            var svg_5 = d3.select("div.ville_featurette_div").append("svg")
+              .attr("width", width_5 + margin_5.left + margin_5.right)
+              .attr("height", height_5 + margin_5.top + margin_5.bottom)
+              .append("g")
+              .attr("transform", "translate(" + margin_5.left + "," + -15 + ")");
+          
+            d3.tsv("agglomeration.tsv", function(error, data) { //data.tsv
+          
+              data.forEach(function(d) {
+              d.categorie = d.categorie//parseDate_5(d.categorie);
+              d.value = +d.value;
+              });
+          
+              var dataByGroup_5 = nest_5.entries(data);
+          
+              stack_5(dataByGroup_5);
+              x_5.domain(dataByGroup_5[0].values.map(function(d) { return d.categorie; }));
+              y0_5.domain(dataByGroup_5.map(function(d) { return d.key; }));
+              y1_5.domain([0, d3.max(data, function(d) { return d.value; })]).range([y0_5.rangeBand(), 0]);
+          
+              var group_5 = svg_5.selectAll(".group_5")
+                .data(dataByGroup_5)
+              .enter().append("g")
+                .attr("class", "group")
+                .attr("transform", function(d) { return "translate(0," + y0_5(d.key) + ")"; });
+          
+              group_5.append("text")
+                .attr("class", "group-label")
+                .attr("x", -6)
+                .attr("y", function(d) { return y1_5(d.values[0].value / 2); })
+                .attr("dy", ".35em")
+                .text(function(d) { return d.key; });
+          
+              group_5.selectAll("rect")
+                .data(function(d) { return d.values; })
+              .enter().append("rect")
+                .style("fill", function(d) { return color_5(d.group); })
+                .attr("x", function(d) { return x_5(d.categorie); })
+                .attr("y", function(d) { return y1_5(d.value); })
+                .attr("width", x_5.rangeBand())
+                .attr("height", function(d) { return y0_5.rangeBand() - y1_5(d.value); });
+          
+              group_5.filter(function(d, i) { return !i; }).append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + y0_5.rangeBand() + ")")
+                .call(xAxis_5);
+          
+              d3.selectAll("input.input5").on("change", change_5);
+          
+             // var timeout_5 = setTimeout(function() {
+             // d3.select("input[value=\"stacked\"]").property("checked", true).each(change_5);
+             // }, 2000);
+          
+              function change_5() {
+              //clearTimeout(timeout_5);
+              if (this.value === "multiples") transitionMultiples_5();
+              else transitionStacked_5();
+              }
+          
+              function transitionMultiples_5() {
+              var t = svg_5.transition().duration(750),
+                g = t.selectAll(".group").attr("transform", function(d) { return "translate(0," + y0_5(d.key) + ")"; });
+              g.selectAll("rect").attr("y", function(d) { return y1_5(d.value); });
+              g.select(".group-label").attr("y", function(d) { return y1_5(d.values[0].value / 2); })
+              }
+          
+              function transitionStacked_5() {
+              var t = svg_5.transition().duration(750),
+                g = t.selectAll(".group").attr("transform", "translate(0," + y0_5(y0_5.domain()[0]) + ")");
+              g.selectAll("rect").attr("y", function(d) { return y1_5(d.value + d.valueOffset); });
+              g.select(".group-label").attr("y", function(d) { return y1_5(d.values[0].value / 2 + d.values[0].valueOffset); })
+              }
+            });
+          
+            </script>
+          
+        </div>
+        </div>
+
+        <!-- END HABITAT -->
+
+        <hr class="featurette-divider">
+
+        <!-- START PROFESSIONS -->
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading" style="text-align:justify">Les ouvriers séduits.</h2>
+            <p class="lead" style="text-align:justify">Les régions du Nord sont celle qui regroupent le plus d’ouvriers en France (Source : Insee, Recensement de la Population 2007).
+
+            Marine Lepen est très populaire parmi les employés (41%) et les ouvriers (35%), tandis que les cadres, les professions intermédiaires et les retraités sont relativement hermétiques au vote pour Marine Le Pen.
+            </p>  
+            </div>
+            <style>
+                .profession_featurette_div {
+                  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                  margin: auto;
+                  position: relative;
+                  width: 300px;
+                  left: -150px;
+                }
+        
+                text {
+                  font: 10px sans-serif;
+                }
+        
+                .axis path {
+                  display: none;
+                }
+        
+                .axis line {
+                  fill: none;
+                  stroke: #000;
+                  shape-rendering: crispEdges;
+                }
+        
+                .group-label {
+                  font-weight: bold;
+                  text-anchor: end;
+                }
+        
+                </style>
+        
+              
+                    <div class="col-md-5 profession_featurette_div">
+                <form style="position:absolute;right:-20px;top:-40px;">
+                  <label><input class="input3" type="radio" name="mode" value="multiples" checked> Vue par candidat </label>
+                  <label><input class="input3" type="radio" name="mode" value="stacked"> Vue par profession </label>
+                </form>
+              
+        
+              <script>
+        
+                var parseDate_3 = d3.time.format("%Y-%m").parse,
+                  formatYear_3 = d3.format("02d"),
+                  formatDate_3 = function(d) { return d; };//function(d) { return "Q" + ((d.getMonth() / 3 | 0) + 1) + formatYear_3(d.getFullYear() % 100); };
+        
+                var margin_3 = {top: 30, right: 20, bottom: -40, left: 90},
+                  width_3 = 600 - margin_3.left - margin_3.right,
+                  height_3 = 400 - margin_3.top - margin_3.bottom;
+        
+                var y0_3 = d3.scale.ordinal()
+                  .rangeRoundBands([height_3, 0], .2);
+        
+                var y1_3 = d3.scale.linear();
+        
+                var x_3 = d3.scale.ordinal()
+                  .rangeRoundBands([0, width_3], .1, 0);
+        
+                var xAxis_3 = d3.svg.axis()
+                  .scale(x_3)
+                  .orient("bottom")
+                  .tickFormat(formatDate_3);
+        
+                var nest_3 = d3.nest()
+                  .key(function(d) { return d.group; });
+        
+                var stack_3 = d3.layout.stack()
+                  .values(function(d) { return d.values; })
+                  .x(function(d) { return d.categorie; })
+                  .y(function(d) { return d.value; })
+                  .out(function(d, y0_3) { d.valueOffset = y0_3; });
+        
+            var color_3 = function(e){
+				if( e=="Mélenchon"){
+					return COLOR_MELENCHON;
+				}
+				if( e=="Hamon"){
+					return COLOR_HAMON;
+				}
+				if( e=="Lepen"){
+					return COLOR_LEPEN;
+				}
+				if( e=="Macron"){
+					return COLOR_MACRON;
+				}
+				if( e=="Fillon"){
+					return COLOR_FILLON;
+				}
+				else return "#000000"};
+        
+                var svg_3 = d3.select("div.profession_featurette_div").append("svg")
+                  .attr("width", width_3 + margin_3.left + margin_3.right)
+                  .attr("height", height_3 + margin_3.top + margin_3.bottom)
+                  .append("g")
+                  .attr("transform", "translate(" + margin_3.left + "," + -20 + ")"); // Change the -40 to set the position of the svg
+        
+                d3.tsv("profession.tsv", function(error, data) { //data.tsv
+        
+                  data.forEach(function(d) {
+                  d.categorie = d.categorie//parseDate_3(d.categorie);
+                  d.value = +d.value;
+                  });
+        
+                  var dataByGroup_3 = nest_3.entries(data);
+        
+                  stack_3(dataByGroup_3);
+                  x_3.domain(dataByGroup_3[0].values.map(function(d) { return d.categorie; }));
+                  y0_3.domain(dataByGroup_3.map(function(d) { return d.key; }));
+                  y1_3.domain([0, d3.max(data, function(d) { return d.value; })]).range([y0_3.rangeBand(), 0]);
+        
+                  var group_3 = svg_3.selectAll(".group_3")
+                    .data(dataByGroup_3)
+                  .enter().append("g")
+                    .attr("class", "group")
+                    .attr("transform", function(d) { return "translate(0," + y0_3(d.key) + ")"; });
+        
+                  group_3.append("text")
+                    .attr("class", "group-label")
+                    .attr("x", -6)
+                    .attr("y", function(d) { return y1_3(d.values[0].value / 2); })
+                    .attr("dy", ".35em")
+                    .text(function(d) { return d.key; });
+        
+                  group_3.selectAll("rect")
+                    .data(function(d) { return d.values; })
+                  .enter().append("rect")
+                    .style("fill", function(d) { return color_3(d.group); })
+                    .attr("x", function(d) { return x_3(d.categorie); })
+                    .attr("y", function(d) { return y1_3(d.value); })
+                    .attr("width", x_3.rangeBand())
+                    .attr("height", function(d) { return y0_3.rangeBand() - y1_3(d.value); });
+        
+                  group_3.filter(function(d, i) { return !i; }).append("g")
+                    .attr("class", "x axis")
+                    .attr("transform", "translate(0," + y0_3.rangeBand() + ")")
+                    .call(xAxis_3);
+        
+                  d3.selectAll("input.input3").on("change", change_3);
+        
+                 // var timeout_3 = setTimeout(function() {
+                 // d3.select("input[value=\"stacked\"]").property("checked", true).each(change_3);
+                 // }, 2000);
+        
+                  function change_3() {
+                 // clearTimeout(timeout_3);
+                  if (this.value === "multiples") transitionMultiples_3();
+                  else transitionStacked_3();
+                  }
+        
+                  function transitionMultiples_3() {
+                  var t = svg_3.transition().duration(750),
+                    g = t.selectAll(".group").attr("transform", function(d) { return "translate(0," + y0_3(d.key) + ")"; });
+                  g.selectAll("rect").attr("y", function(d) { return y1_3(d.value); });
+                  g.select(".group-label").attr("y", function(d) { return y1_3(d.values[0].value / 2); })
+                  }
+        
+                  function transitionStacked_3() {
+                  var t = svg_3.transition().duration(750),
+                    g = t.selectAll(".group").attr("transform", "translate(0," + y0_3(y0_3.domain()[0]) + ")");
+                  g.selectAll("rect").attr("y", function(d) { return y1_3(d.value + d.valueOffset); });
+                  g.select(".group-label").attr("y", function(d) { return y1_3(d.values[0].value / 2 + d.values[0].valueOffset); })
+                  }
+                });
+        
+                </script>
+        
+        </div>
+        </div>
+
+        <!-- END PROFESSIONS -->
+
+        <hr class="featurette-divider" id="pourquoi_href">
+
+        <!-- START MOTIVATIONS (RIGHT) -->
+
+        <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading" style="text-align:justify">La crainte du chômage pousse les français à voter.</span></h2>
+              <p class="lead" style="text-align:justify">Lors d’un sondage Ipsos / Sopra Steria, on a demandé à un échantillon représentatif d’électeur de fournir les préoccupations qui les poussent au vote (plusieurs choix possibles).
+                
+                L’emploi, le pouvoir d’achat, l’immigration et la sécurité sont les préoccupations majeures qui déterminent le vote des français.</p>
+            </div>
+            <div class="col-md-5" style="left:60px;top:-20px">
+              <img src="graphe_motivations.png" alt="Generic placeholder image" width="450px" height="500px">
+            </div>
+          </div>
+  
+          <!-- END MOTIVATIONS (RIGHT) -->
+  
+          <hr class="featurette-divider">
+		  
+        <!-- START GRAPHE DYNAMIQUE SIMON (LEFT) -->
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading" style="text-align:justify">Le Front National, une réponse à un problème social.</h2>
+            <p class="lead" style="text-align:justify">Lancez l’animation et essayez de comprendre les raisons du vote FN au fil des ans.
+<br>
+                Alors que le FN se démarque par son discours radical sur les sujets d’immigration et de délinquance (droit du sang, préférence nationale, peine de mort), ses résultats  ne sont pas corrélés avec ces phénomènes. 
+
+                Les résultats du FN sont corrélés positivement avec le niveau du chômage. En période de fort chômage, les français apprécient donc les réponses apportées par le Front National.</p>
+            </p>
+          </div>
+            <div class="col-md-5 order-md-1" style="left:-50px">
+			<div class="graphe_de_simon">
+			</div>
+              <script>
+function draw_graphique_6(data) {
+                    //Largeur et hauteur du graphe
+                    var larg_tot =500;
+                    var larg =450;
+                    var haut =500;
+                    var haut_txt =60;
+                    var bord = 22;
+                    
+                    var legend_larg = (larg_tot-larg)*0.9;
+                    var legend_haut = haut*0.6;
+                    var legend_origine_x = 0; //larg+(larg_tot-larg)*0.05;
+                    var legend_origine_y = haut*0.7;
+                    var graph_larg = larg-2*bord;
+                    var hautg = haut*0.7;
+                    var graph_haut = hautg-2*bord;
+                    var graph_origine_x = bord;
+                    var graph_origine_y = bord;
+                    
+                    var box_x = 20;
+                    var box_dx = 200;
+                    var label_dx = 20;
+                    var box_y = 0;
+                    var box_dy = 20;
+                    var label_dy = 12;
+                    var box_restart_x = 150;
+                    var box_restart_y = 0;
+                        
+                    var svg_conteneur = d3.select("div.graphe_de_simon");
+                        
+                    var svg_txt = d3.select("div.graphe_de_simon")
+                        .append("svg")
+                        .attr("width", larg_tot)
+                        .attr("height", haut_txt);                        
+                        
+                    //Creation de l'élément SVG
+                    var svg = d3.select("div.graphe_de_simon")
+                        .append("svg")
+                        .attr("width", larg_tot)
+                        .attr("height", haut);
+                        
+                    // function
+                    function f_ann(d){return d.ann;}
+                    function f_sco(d){return -d.sco;}
+                    function f_imm(d){return -d.imm;}
+                    function f_del(d){return -d.del;}
+                    function f_chm(d){return -d.chm;}
+                    function f_del_ok(d){
+                        return d.del!==-1;
+                        }
+                    
+                    // scale
+                    var sc_ann = d3.scale.linear()
+                        .domain([
+                            d3.min(data, f_ann), 
+                            d3.max(data, f_ann)])
+                        .range([bord,larg-bord]);
+                    var sc_sco = d3.scale.linear()
+                        .domain([
+                            d3.min(data, f_sco), 
+                            0])
+                        .range([bord,hautg-bord]);
+                    var sc_imm = d3.scale.linear()
+                        .domain([
+                            -7, 
+                            0])
+                        .range([bord,hautg-bord]);
+                    var sc_del = d3.scale.linear()
+                        .domain([
+                            d3.min(data, f_del), 
+                            d3.max(data, f_del)])
+                        .range([bord,hautg-bord]);
+                    var sc_chm = d3.scale.linear()
+                        .domain([
+                            d3.min(data, f_chm), 
+                            d3.max(data, f_chm)])
+                        .range([bord,hautg-bord]);
+                        
+                    // function scalee
+                    function fs_ann(d){return sc_ann(d.ann);}
+                    //function fs_ann_n(d){return sc_ann(d.ann+10);}
+                    function fs_sco(d){return sc_sco(-d.sco);}
+                    function fs_chm(d){return sc_chm(-d.chm);}
+                    function fs_chm2(d){return sc_sco(-d.chm2);}
+                    function fs_imm(d){return sc_imm(-d.imm);}
+                    function fs_imm2(d){return sc_sco(-d.imm2);}
+                    function fs_del(d){return sc_del(-d.del);}
+                    function fs_del2(d){return sc_sco(-d.del2);}
+                    
+                    // les axes
+                    var xAxis = d3.svg.axis()
+                        .scale(sc_ann)
+                        .ticks(5)
+                        .orient("bottom")
+                        .tickFormat(function(d) { return( d ); });
+                        
+                    svg.append("g")
+                        .attr("class", "axis")//Assigne la classe CSS "axis"
+                        .attr("transform", "translate(0,"+(hautg - bord)+")")
+                        .call(xAxis);
+                        
+                    var yAxis = d3.svg.axis()
+                        .scale(sc_sco)
+                        .ticks(5)
+                        .orient("left");
+                        
+                        
+                    svg.append("g")
+                        .attr("class", "axis")//Assigne la classe CSS "axis"
+                        .attr("transform", "translate("+bord+",0)");
+                        //.call(yAxis);
+                    
+                    var color_rect = "#DDDDDD";
+                    
+                    var graph = svg.append("rect")
+                        .attr("width", graph_larg)
+                        .attr("height", graph_haut)                                    
+                        .attr("x", graph_origine_x) 
+                        .attr("y", graph_origine_y)
+                        .attr("fill","none")
+                        .attr("stroke", color_rect)
+                        .attr("class", "graph_rect")
+                        .attr("stroke-width","2");
+                        
+                    var legend = svg.append("rect")
+                        .attr("width", legend_larg)
+                        .attr("height", legend_haut)                                    
+                        .attr("x", legend_origine_x) 
+                        .attr("y", legend_origine_y)
+                        .attr("fill","white")
+                        .attr("stroke", color_rect)
+                        .attr("class", "legend_rect")
+                        .attr("stroke-width","0");
+                    
+                    var color_sco = COLOR_LEPEN; //"#3399FF";
+                    var color_imm = "#66AA33";
+                    var color_del = "#FF9933";
+                    var color_chm = "#FF3333";
+                    var color_restart = "#AAAAAA";
+                    var color_box_empty = "#EEEEEE";
+                    
+                    var aff_sco = false;
+                    var aff_imm = false;
+                    var aff_del = false;
+                    var aff_chm = false;
+                    
+                    // score du FN
+                    var groupe_sco = svg.append("g");
+                    var line_sco_trace = d3.svg.line()
+                        .x (fs_ann)
+                        .y (fs_sco)
+                        .interpolate("monotone");
+                    var line_sco = groupe_sco.selectAll("path")
+                        .data([data])
+                        .enter()
+                        .append("path")
+                        .attr("d",line_sco_trace)
+                        .attr("fill", "none")
+                        .attr("stroke", color_sco)
+                        .attr("stroke-width","2");
+                    var len_sco = line_sco.node().getTotalLength();
+                    line_sco
+                        .attr("stroke-dasharray", len_sco + " " + len_sco)
+                        .attr("stroke-dashoffset", -len_sco);
+                    // IMMIGRATION
+                    var groupe_imm = svg.append("g");
+                    var line_imm_trace = d3.svg.line()
+                        .x (fs_ann)
+                        .y (fs_imm)
+                        .interpolate("monotone");
+                    var line_imm = groupe_imm.selectAll("path")
+                        .data([data])
+                        .enter()
+                        .append("path")
+                        .attr("d",line_imm_trace)
+                        .attr("fill", "none")
+                        .attr("stroke", color_imm)
+                        .attr("stroke-width","2");
+                    var len_imm = line_imm.node().getTotalLength();
+                    line_imm
+                        .attr("stroke-dasharray", len_imm + " " + len_imm)
+                        .attr("stroke-dashoffset", -len_imm);
+                    // DELINQUANCE
+                    var groupe_del = svg.append("g");
+                    var line_del_trace = d3.svg.line()
+                        .x (fs_ann)
+                        .y (fs_del)
+                        .interpolate("monotone")
+                        .defined(function(d) { return d.del >= 0; });
+                    var line_del = groupe_del.selectAll("path")
+                        .data([data])
+                        .enter()
+                        .append("path")
+                        .attr("d",line_del_trace)
+                        .attr("fill", "none")
+                        .attr("stroke", color_del)
+                        .attr("stroke-width","2");
+                    var len_del = line_del.node().getTotalLength();
+                    line_del
+                        .attr("stroke-dasharray", len_del + " " + len_del)
+                        .attr("stroke-dashoffset", -len_del);
+                    // CHOMAGE
+                    var groupe_chm = svg.append("g");
+                    var line_chm_trace = d3.svg.line()
+                        .x (fs_ann)
+                        .y (fs_chm)
+                        .interpolate("monotone");
+                    var line_chm = groupe_chm.selectAll("path")
+                        .data([data])
+                        .enter()
+                        .append("path")
+                        .attr("d",line_chm_trace)
+                        .attr("fill", "none")
+                        .attr("stroke", color_chm)
+                        .attr("stroke-width","2");
+                    var len_chm = line_chm.node().getTotalLength();
+                    line_chm
+                        .attr("stroke-dasharray", len_chm + " " + len_chm)
+                        .attr("stroke-dashoffset", -len_chm);
+                    
+                    function aff_sco_fct(){
+                        aff_sco = ! aff_sco;
+                        box_sco.attr("fill",aff_color(aff_sco,color_sco));
+                        if( aff_sco){
+                            line_sco
+                              .attr("stroke-dashoffset", len_sco)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", 0);
+                        }
+                        else {
+                            line_sco
+                              .attr("stroke-dashoffset", 0)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", -len_sco);
+                        }
+                    }
+                    function aff_imm_fct(){
+                        aff_imm = ! aff_imm;
+                        box_imm.attr("fill",aff_color(aff_imm,color_imm));
+                        if( aff_imm){
+                            line_imm
+                              .attr("stroke-dashoffset", len_imm)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", 0);
+                        }
+                        else {
+                            line_imm
+                              .attr("stroke-dashoffset", 0)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", -len_imm);
+                        }
+                    }
+                    function aff_del_fct(){
+                        aff_del = ! aff_del;
+                        box_del.attr("fill",aff_color(aff_del,color_del));
+                        if( aff_del){
+                            line_del
+                              .attr("stroke-dashoffset", len_del)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", 0);
+                        }
+                        else {
+                            line_del
+                              .attr("stroke-dashoffset", 0)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", -len_del);
+                        }
+                    }
+                    function aff_chm_fct(){
+                        aff_chm = ! aff_chm;
+                        box_chm.attr("fill",aff_color(aff_chm,color_chm));
+                        if( aff_chm){
+                            line_chm
+                              .attr("stroke-dashoffset", len_chm)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", 0);
+                        }
+                        else {
+                            line_chm
+                              .attr("stroke-dashoffset", 0)
+                              .transition()
+                                .duration(1000)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", -len_chm);
+                        }
+                    }
+                    
+                    function aff_color(aff,color){ return( aff ? color: color_box_empty);}
+                        
+                    
+                    var box_sco = svg.append("rect")
+                        .attr("width", 12)
+                        .attr("height", 12)                                    
+                        .attr("x", legend_origine_x+box_x) 
+                        .attr("y", legend_origine_y+box_y)
+                        .attr("fill",aff_color(aff_sco,color_sco))
+                        .attr("stroke", "#000000")
+                        .attr("class", "legend")
+                        .attr("stroke-width","1")
+                        .on("click", aff_sco_fct)
+                        .on("mouseout", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",aff_color(aff_sco,color_sco));    })
+                        .on("mouseover", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",color_sco);    });
+                    var label_sco = svg.append("text")               
+                            .attr("x", legend_origine_x+box_x+label_dx) 
+                            .attr("y", legend_origine_y+box_y+label_dy)
+                            .style("font-size", "14px")
+                            .attr("fill","#000000")
+                            .text("Front National (Nb de voix)");    
+                    
+                    var box_imm = svg.append("rect")
+                        .attr("width", 12)
+                        .attr("height", 12)                                    
+                        .attr("x", legend_origine_x+box_x) 
+                        .attr("y", legend_origine_y+box_y+box_dy)
+                        .attr("fill",aff_color(aff_imm,color_imm))
+                        .attr("stroke", "#000000")
+                        .attr("class", "legend")
+                        .attr("stroke-width","1")
+                        .on("click", aff_imm_fct)
+                        .on("mouseout", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",aff_color(aff_imm,color_imm));    })
+                        .on("mouseover", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",color_imm);    });
+                    var label_imm = svg.append("text")               
+                            .attr("x", legend_origine_x+box_x+label_dx) 
+                            .attr("y", legend_origine_y+box_y+box_dy+label_dy)
+                            .style("font-size", "14px")
+                            .attr("fill","#000000")
+                            .text("Immigration");    
+                                    
+                    var box_del = svg.append("rect")
+                        .attr("width", 12)
+                        .attr("height", 12)                                    
+                        .attr("x", legend_origine_x+box_x+box_dx) 
+                        .attr("y", legend_origine_y+box_y)
+                        .attr("fill",aff_color(aff_del,color_del))
+                        .attr("stroke", "#000000")
+                        .attr("class", "legend")
+                        .attr("stroke-width","1")
+                        .on("click", aff_del_fct)
+                        .on("mouseout", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",aff_color(aff_del,color_del));    })
+                        .on("mouseover", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",color_del);    });
+                    var label_del = svg.append("text")               
+                            .attr("x", legend_origine_x+box_x+box_dx+label_dx) 
+                            .attr("y", legend_origine_y+box_y+label_dy)
+                            .style("font-size", "14px")
+                            .attr("fill","#000000")
+                            .text("Délinquance (Nb de condamnations)");
+                                    
+                    var box_chm = svg.append("rect")
+                        .attr("width", 12)
+                        .attr("height", 12)                                    
+                        .attr("x", legend_origine_x+box_x+box_dx) 
+                        .attr("y", legend_origine_y+box_y+box_dy)
+                        .attr("fill",aff_color(aff_chm,color_chm))
+                        .attr("stroke", "#000000")
+                        .attr("class", "legend")
+                        .attr("stroke-width","1")
+                        .on("click", aff_chm_fct)
+                        .on("mouseout", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",aff_color(aff_chm,color_chm));    })
+                        .on("mouseover", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",color_chm);    });
+                    var label_chm = svg.append("text")               
+                            .attr("x", legend_origine_x+box_x+box_dx+label_dx) 
+                            .attr("y", legend_origine_y+box_y+box_dy+label_dy)
+                            .style("font-size", "14px")
+                            .attr("fill","#000000")
+                            .text("Chomage (taux)");
+                        
+                        var trans = 1500;
+                            
+                        d_1 = svg_txt.append("text") 
+                            .attr("x", 220) 
+                            .attr("y", 20) 
+                            .attr("text-anchor", "middle") 
+                            .style("font-size", "15px")
+                            .attr("fill","#FFFFFF")
+                            .text(" ");
+                        d_2 = svg_txt.append("text") 
+                            .attr("x", 220) 
+                            .attr("y",40) 
+                            .attr("text-anchor", "middle") 
+                            .style("font-size", "15px")
+                            .attr("fill","#FFFFFF")
+                            .text(" ");    
+                        
+                        texte_haut = [    "Depuis les années 1990, Le front national",
+                                        "Peut-on trouver des raisons sociologiques",
+                                        "Le front national est connu",
+                                        "Voici le taux d'immigration en france par année.",
+                                        "La corrélation est nulle.",
+                                        "Le front national est aussi connu",
+                                        "Voici le taux de délinquance en france par année.",
+                                        "Le taux de corrélation est négatif !",
+                                        "Mais alors, quelle peut bien être la cause",
+                                        "Voici la courbe du chômage en france par année.",
+                                        "Oui, cette fois-ci, la corrélation est POSITIVE !",
+                                        "Le niveau du chômage est donc le meilleur facteur"
+                                        ];
+                        texte_bas  = [    "enchaîne des bons résultats aux élections.",
+                                        "ou sociétales à ces résultats ?",
+                                        "pour son discours anti-immigration.",
+                                        "Est-ce corrélé avec le score du FN ?",
+                                        "Il n'y a pas de lien direct entre les deux courbes.",
+                                        "pour son discours autoritaire.",
+                                        "Est-ce corrélé avec le score du FN ?",
+                                        "Le FN a plus de voix lorsque la délinquance est faible.",
+                                        "des résultats du FN ?",
+                                        "Est-ce corrélé avec le score du FN ?",
+                                        "Les courbes du FN et du chômage sont très similaires.",
+                                        "expliquant les hauts scores du FN."
+                                        ];
+                                        
+                        numero_texte = 0;
+                        
+                        function aff_txt(){
+                            d_1.transition()
+                                .duration(trans)
+                                .attr("fill","#000000")
+                                .text(texte_haut[numero_texte]);
+                            d_2.transition()
+                                .duration(trans)
+                                .attr("fill","#000000")
+                                .text(texte_bas[numero_texte]);
+                            numero_texte += 1;
+                        }
+                        function effacer_txt(){
+                            d_1.transition()
+                                .duration(trans)
+                                .attr("fill","#FFFFFF")
+                            d_2.transition()
+                                .duration(trans)
+                                .attr("fill","#FFFFFF")
+                        }
+                        
+                        var lect = 8000
+                        
+                        function animation(){
+                            numero_texte = 0;
+                            box_restart
+                                    .transition(trans)
+                                    .attr("width", 0)
+                                    .attr("height", 0);
+                            label_restart
+                                    .transition(trans)
+                                    .attr("fill","#FFFFFF");
+                            if( aff_imm ){
+                                aff_imm_fct();
+                            }
+                            if( aff_del){
+                                aff_del_fct();
+                            }
+                            if( aff_chm ){
+                                aff_chm_fct();
+                            }
+                            for( i=0; i<12; i++){
+                                setTimeout(effacer_txt, i*lect);
+                                setTimeout(aff_txt, i*lect+trans);
+                            }
+                            if( ! aff_sco ){
+                                setTimeout(aff_sco_fct, 10);
+                            }
+                            setTimeout(aff_imm_fct, 3*lect+trans);
+                            setTimeout(aff_imm_fct, 6*lect+trans);
+                            setTimeout(aff_del_fct, 6*lect+trans);
+                            setTimeout(aff_del_fct, 9*lect+trans);
+                            setTimeout(aff_chm_fct, 9*lect+trans);
+                            box_restart
+                                    .transition(trans)
+                                    .delay(12*lect)
+                                    .attr("width", 12)
+                                    .attr("height", 12);
+                            label_restart
+                                    .transition(trans)
+                                    .delay(12*lect)
+                                    .attr("fill","#000000")
+                                    .text("Relancer l'animation");
+                        }
+                                                
+                        var box_restart = svg.append("rect")
+                        .attr("width", 12)
+                        .attr("height", 12)                                    
+                        .attr("x", box_restart_x ) 
+                        .attr("y", box_restart_y )
+                        .attr("fill",color_box_empty)
+                        .attr("stroke", "#000000")
+                        .attr("class", "legend")
+                        .attr("stroke-width","1")
+                        .on("click", animation)
+                        .on("mouseout", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",color_box_empty);    })
+                        .on("mouseover", 
+                            function(d){
+                                d3.select(this)
+                                    .transition()
+                                    .attr("fill",color_restart);    });
+                                    
+                        var label_restart = svg.append("text")               
+                                .attr("x", box_restart_x+label_dx) 
+                                .attr("y", box_restart_y+label_dy)
+                                .style("font-size", "14px")
+                                .attr("fill","#000000")
+                                .text("Lancer l'animation");
+                                
+                    }
+                 d3.json("data_6.json", draw_graphique_6);
+			  </script>
+          </div>
+        </div>
+        <!-- END GRAPHE DYNAMIQUE SIMON (RIGHT) -->
+
+		  
+        <hr class="featurette-divider">
+		  
+        <!-- START GRAPHE DYNAMIQUE YOUSRA RIGHT -->
+
+        <div class="row featurette">
+            <div>
+              <h2 class="featurette-heading" style="text-align:justify">Le terrorisme au cœur du discours du FN.</h2>
+              <p class="lead" style="text-align:justify">De quoi parlent les candidats dans leur discours ?
+<br>
+                Découvrez le nombre de fois que chaque candidat a prononcé les mots magiques : « chômage », « protection sociale », « pouvoir d’achat », « terrorisme », « immigration », correspondant aux cinq préoccupations majeures des français.
+            
+
+                Si vous cliquez sur le rectangle « terrorisme », vous verrez que Marine Le Pen a prononcé ce mot 77 fois lors de ses discours politiques, elle a donc mentionné le terrorisme plus que ses concurrents. 
+                <br>
+                Marine Le Pen prend soin de mentionner toutes les préoccupations des français. Au vu des résultats du premier tour, sa stratégie de communication a été efficace.
+
+                Si vous vous intéressez à d’autres mots, on vous invite à visiter le site de <a href="http://www.parismatch.com/Le-Poids-des-Mots">ParisMatch</a>.
+                </p>
+            </div>
+            <div>
+			
+                <style scoped>
+                    
+                    .axis path,
+                    .axis line {
+                      fill: none;
+                      stroke: #000;
+                      shape-rendering: crispEdges;
+                    }
+                    
+                    .x.axis path {  display: none; }
+                    .legend{
+                        margin-bottom:76px;
+                        display:inline-block;
+                        border-collapse: collapse;
+                        border-spacing: 0px;
+                    }
+                    .legend td{
+                        padding:4px 5px;
+                        vertical-align:bottom;
+                    }
+                    .legendFreq, .legendPerc{
+                        align:right;
+                        width:50px;
+                    }
+                    
+                    </style>
+
+            <div id='dashboard'></div>
+			
+			<script>
+              function dashboard_8(id, fData){
+                  var barColor_8 = COLOR_NEUTRE;
+                  function segColor(c){ return {Lepen:COLOR_LEPEN, Macron:COLOR_MACRON,Fillon:COLOR_FILLON, Hamon:COLOR_HAMON, Melenchon:COLOR_MELENCHON}[c]; }
+                  
+                  // compute total for each state.
+                  fData.forEach(function(d){d.total=d.freq.Lepen+d.freq.Macron+d.freq.Fillon+d.freq.Hamon+d.freq.Melenchon;});
+                  
+                  // function to handle histogram.
+                  function histoGram(fD){
+                      var hG_8={},    hG_8Dim = {t: 60, r: 0, b: 30, l: 110};
+                      hG_8Dim.w = 500 - hG_8Dim.l - hG_8Dim.r, 
+                      hG_8Dim.h = 300 - hG_8Dim.t - hG_8Dim.b;
+                          
+                      //create svg for histogram.
+                      var hGsvg_8 = d3.select(id).append("svg")
+                          .attr("width", hG_8Dim.w + hG_8Dim.l + hG_8Dim.r)
+                          .attr("height", hG_8Dim.h + hG_8Dim.t + hG_8Dim.b).append("g")
+                          .attr("transform", "translate(" + hG_8Dim.l + "," + hG_8Dim.t + ")");
+              
+                      // create function for x-axis mapping.
+                      var x = d3.scale.ordinal().rangeRoundBands([0, hG_8Dim.w], 0.1)
+                              .domain(fD.map(function(d) { return d[0]; }));
+              
+                      // Add x-axis to the histogram svg.
+                      hGsvg_8.append("g").attr("class", "x axis")
+                          .attr("transform", "translate(0," + hG_8Dim.h + ")")
+                          .call(d3.svg.axis().scale(x).orient("bottom"));
+              
+                      // Create function for y-axis map.
+                      var y = d3.scale.linear().range([hG_8Dim.h, 0])
+                              .domain([0, d3.max(fD, function(d) { return d[1]; })]);
+              
+                      // Create bars for histogram to contain rectangles and freq labels.
+                      var bars = hGsvg_8.selectAll(".bar").data(fD).enter()
+                              .append("g").attr("class", "bar");
+                      
+                      //create the rectangles.
+                      bars.append("rect")
+                          .attr("x", function(d) { return x(d[0]); })
+                          .attr("y", function(d) { return y(d[1]); })
+                          .attr("width", x.rangeBand())
+                          .attr("height", function(d) { return hG_8Dim.h - y(d[1]); })
+                          .attr('fill',barColor_8)
+                          .on("mouseover",mouseover)// mouseover is defined below.
+                          .on("mouseout",mouseout);// mouseout is defined below.
+                          
+                      //Create the frequency labels above the rectangles.
+                      bars.append("text").text(function(d){ return d3.format(",")(d[1])})
+                          .attr("x", function(d) { return x(d[0])+x.rangeBand()/2; })
+                          .attr("y", function(d) { return y(d[1])-5; })
+                          .attr("text-anchor", "middle");
+                      
+                      function mouseover(d){  // utility function to be called on mouseover.
+                          // filter for selected state.
+                          var st_8 = fData.filter(function(s){ return s.Preocupation == d[0];})[0],
+                              nD_8 = d3.keys(st_8.freq).map(function(s){ return {type:s, freq:st_8.freq[s]};});
+                             
+                          // call update functions of pie-chart and legend.    
+                          pC_8.update(nD_8);
+                          leg_8.update(nD_8);
+                      }
+                      
+                      function mouseout(d){    // utility function to be called on mouseout.
+                          // reset the pie-chart and legend.    
+                          pC_8.update(tF);
+                          leg_8.update(tF);
+                      }
+                      
+                      // create function to update the bars. This will be used by pie-chart.
+                      hG_8.update = function(nD_8, color){
+                          // update the domain of the y-axis map to reflect change in frequencies.
+                          y.domain([0, d3.max(nD_8, function(d) { return d[1]; })]);
+                          
+                          // Attach the new data to the bars.
+                          var bars = hGsvg_8.selectAll(".bar").data(nD_8);
+                          
+                          // transition the height and color of rectangles.
+                          bars.select("rect").transition().duration(500)
+                              .attr("y", function(d) {return y(d[1]); })
+                              .attr("height", function(d) { return hG_8Dim.h - y(d[1]); })
+                              .attr("fill", color);
+              
+                          // transition the frequency labels location and change value.
+                          bars.select("text").transition().duration(500)
+                              .text(function(d){ return d3.format(",")(d[1])})
+                              .attr("y", function(d) {return y(d[1])-5; });            
+                      }        
+                      return hG_8;
+                  }
+                  
+                  // function to handle pieChart.
+                  function pieChart(pD){
+                      var pC_8 ={},    pie_8Dim ={w:350, h: 250};
+                      pie_8Dim.r = Math.min(pie_8Dim.w, pie_8Dim.h) / 2;
+                              
+                      // create svg for pie chart.
+                      var piesvg_8 = d3.select(id).append("svg")
+                          .attr("width", pie_8Dim.w).attr("height", pie_8Dim.h).append("g")
+                          .attr("transform", "translate("+pie_8Dim.w/2+","+pie_8Dim.h/2+")");
+                      
+                      // create function to draw the arcs of the pie slices.
+                      var arc_8 = d3.svg.arc().outerRadius(pie_8Dim.r - 10).innerRadius(0);
+              
+                      // create a function to compute the pie slice angles.
+                      var pie_8 = d3.layout.pie().sort(null).value(function(d) { return d.freq; });
+              
+                      // Draw the pie slices.
+                      piesvg_8.selectAll("path").data(pie_8(pD)).enter().append("path").attr("d", arc_8)
+                          .each(function(d) { this._current = d; })
+                          .style("fill", function(d) { return segColor(d.data.type); })
+                          .on("mouseover",mouseover).on("mouseout",mouseout);
+              
+                      // create function to update pie-chart. This will be used by histogram.
+                      pC_8.update = function(nD_8){
+                          piesvg_8.selectAll("path").data(pie_8(nD_8)).transition().duration(500)
+                              .attrTween("d", arcTween);
+                      }        
+                      // Utility function to be called on mouseover a pie slice.
+                      function mouseover(d){
+                          // call the update function of histogram with new data.
+                          hG_8.update(fData.map(function(v){ 
+                              return [v.Preocupation,v.freq[d.data.type]];}),segColor(d.data.type));
+                      }
+                      //Utility function to be called on mouseout a pie slice.
+                      function mouseout(d){
+                          // call the update function of histogram with all data.
+                          hG_8.update(fData.map(function(v){
+                              return [v.Preocupation,v.total];}), barColor_8);
+                      }
+                      // Animating the pie-slice requiring a custom function which specifies
+                      // how the intermediate paths should be drawn.
+                      function arcTween(a) {
+                          var i = d3.interpolate(this._current, a);
+                          this._current = i(0);
+                          return function(t) { return arc_8(i(t));    };
+                      }    
+                      return pC_8;
+                  }
+                  
+                  // function to handle legend.
+                  function legend(lD){
+                      var leg_8 = {};
+                          
+                      // create table for legend.
+                      var legend = d3.select(id).append("table").attr('class','legend');
+                      
+                      // create one row per segment.
+                      var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
+                          
+                      // create the first column for each segment.
+                      tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+                          .attr("width", '16').attr("height", '16')
+                    .attr("fill",function(d){ return segColor(d.type); });
+                          
+                      // create the second column for each segment.
+                      tr.append("td").text(function(d){ return d.type;});
+              
+                      // create the third column for each segment.
+                      tr.append("td").attr("class",'legendFreq')
+                          .text(function(d){ return d3.format(",")(d.freq);});
+              
+                      // create the fourth column for each segment.
+                      tr.append("td").attr("class",'legendPerc')
+                          .text(function(d){ return getLegend(d,lD);});
+              
+                      // Utility function to be used to update the legend.
+                      leg_8.update = function(nD_8){
+                          // update the data attached to the row elements.
+                          var l = legend.select("tbody").selectAll("tr").data(nD_8);
+              
+                          // update the frequencies.
+                          l.select(".legendFreq").text(function(d){ return d3.format(",")(d.freq);});
+              
+                          // update the percentage column.
+                          l.select(".legendPerc").text(function(d){ return getLegend(d,nD_8);});        
+                      }
+                      
+                      function getLegend(d,aD){ // Utility function to compute percentage.
+                          return d3.format("%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
+                      }
+              
+                      return leg_8;
+                  }
+                  
+                  // calculate total frequency by segment for all state.
+                  var tF = ['Lepen','Macron','Fillon','Hamon','Melenchon'].map(function(d){ 
+                      return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
+                  });    
+                  
+                  // calculate total frequency by state for all segment.
+                  var sF = fData.map(function(d){return [d.Preocupation,d.total];});
+              
+                  var hG_8 = histoGram(sF), // create the histogram.
+                      pC_8 = pieChart(tF), // create the pie-chart.
+                      leg_8= legend(tF);  // create the legend.
+              }
+              </script>
+              
+              <script>
+              var freqData_8=[
+              {Preocupation:'Chômage',freq:{Lepen:62, Macron:74, Fillon:107,Hamon:31,Melenchon:24}}
+              ,{Preocupation:'Protection sociale',freq:{Lepen:30, Macron:1, Fillon:19,Hamon:40,Melenchon:1}}
+              ,{Preocupation:'Pouvoir achat',freq:{Lepen:41, Macron:14, Fillon:36,Hamon:37,Melenchon:4}}
+              ,{Preocupation:'Terrorisme',freq:{Lepen:77, Macron:52, Fillon:27,Hamon:25,Melenchon:7}}
+              ,{Preocupation:'Immigration',freq:{Lepen:18, Macron:34, Fillon:48,Hamon:5,Melenchon:9}
+              }
+              ];
+              
+              dashboard_8('#dashboard',freqData_8);
+              </script>
+            </div>
+          </div>
+  
+          <!-- END GRAPHE DYNAMIQUE YOUSRA RIGHT -->
+		  
+		  <hr class="featurette-divider">
+		  
+		
+        <!-- START BUBBLE -->
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">Marine Le pen à l’offensive.</h2>
+              <p class="lead" style="text-align:justify">Combien de fois chaque candidat parle-t-il de ses concurrents ?
+
+              Chaque grande bulle représente un candidat. Les petites bulles à l’intérieur sont le nombre de fois que celui-ci parle de ses concurrents.
+
+              Marine Le pen a eu un discours très offensif envers les autres candidats : elle a cité 422 fois ses concurrents ! 
+
+              Cliquez sur la bulle de Marine Le Pen. Elle a particulièrement cité Macron (201 citations) et Fillon (174 citations). 
+                  <br>
+              Est-ce une bonne idée de s’attaquer à ses concurrents ? Si le FN échoue à rallier des électeurs au second tour, c’est sûrement à cause de cette attitude très agressive.
+              </p>
+              </div>
+              <div class="col-md-5 order-md-1">
+                  <style scoped>
+                  
+                    svg.last-graph {
+                        border:2px solid black;
+                        margin-left: -50px;
+                        margin-top: 15px;
+                        }
+          
+                    .node {
+                      cursor: pointer;
+                    }
+                    
+                    .node:hover {
+                      stroke: #000;
+                      stroke-width: 1.5px;
+                    }
+                    
+                    .node--leaff {
+                      fill: rgba(188, 247, 255, 0.849);
+                    }
+                    
+                    .label {
+                      font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+                      text-anchor: middle;
+                      text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+                    }
+                    
+                    .label,
+                    .node--root,
+                    .node--leaf {
+                      pointer-events: none;
+                    }
+                    
+    
+                    </style>
+                    <svg class="last-graph" width="400" height="400"></svg>
+                    <script>
+                    
+                    var svg_1 = d3v4.select("svg.last-graph"),
+                        margin = 20,
+                        diameter = +svg_1.attr("width"),
+                        g = svg_1.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+                    
+                    var color_1 = d3v4.scaleLinear()
+                        .domain([-1, 5])
+                        .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+                        .interpolate(d3v4.interpolateHcl);
+                    
+                    var pack_1 = d3v4.pack()
+                        .size([diameter - margin, diameter - margin])
+                        .padding(2);
+                    
+                    d3v4.json("bubble_data.json", function(error, root) {
+                      if (error) throw error;
+                    
+                      root = d3v4.hierarchy(root)
+                          .sum(function(d) { return d.size; })
+                          .sort(function(a, b) { return b.value - a.value; });
+                    
+                      var focus = root,
+                          nodes = pack_1(root).descendants(),
+                          view;
+                    
+						var color_bulles = function(e){
+							if( e=="Mélenchon"){
+								return COLOR_MELENCHON;
+							}
+							if( e=="Hamon"){
+								return COLOR_HAMON;
+							}
+							if( e=="Le Pen"){
+								return COLOR_LEPEN;
+							}
+							if( e=="Macron"){
+								return COLOR_MACRON;
+							}
+							if( e=="Fillon"){
+								return COLOR_FILLON;
+							}
+							else return "#000000"};
+				
+                      var circle = g.selectAll("circle")
+                        .data(nodes)
+                        .enter().append("circle")
+                          .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+                          .style("fill", function(d) { 
+								console.log(d);
+								if( d.depth == 1 ){
+									return color_bulles(d.data.name);
+									}
+								else if( d.depth == 2 ){
+									return shadeColor(color_bulles(d.parent.data.name),35);
+								}
+								else {
+									return COLOR_NEUTRE;
+								}})
+						  // return d.children ? color_1(d.depth) : null; })
+                          .on("click", function(d) { if (focus !== d) zoom(d), d3v4.event.stopPropagation(); });
+                    
+                      var text = g.selectAll("text")
+                        .data(nodes)
+                        .enter().append("text")
+                          .attr("class", "label")
+                          .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+                          .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
+                          .style("font-weight", "bold")
+                          .text(function(d) { return d.data.name + ": " + d.value; }); // before, without + "\n" + d.value
+                    
+                      var node = g.selectAll("circle,text");
+                    
+                      svg_1
+                          .style("background", "white")//.style("border", "2px solid black").style("margin-left", "50px") // color(-1) instead of "white"
+                          .on("click", function() { zoom(root); });
+                    
+                      zoomTo([root.x, root.y, root.r * 2 + margin]);
+                    
+                      function zoom(d) {
+                        var focus0 = focus; focus = d;
+                    
+                        var transition = d3v4.transition()
+                            .duration(d3v4.event.altKey ? 7500 : 750)
+                            .tween("zoom", function(d) {
+                              var i = d3v4.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+                              return function(t) { zoomTo(i(t)); };
+                            });
+                    
+                        transition.selectAll("text")
+                          .filter(function(d) {if (d==null){return false;} else {return d.parent === focus || this.style.display === "inline"; }})
+                            .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+                            .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+                            .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+                      }
+                    
+                      function zoomTo(v) {
+                        var k = diameter / v[2]; view = v;
+                        node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+                        circle.attr("r", function(d) { return d.r * k; });
+                      }
+                    });
+                    
+                    </script>
+                    
+              </div>
+          </div>
+  
+        <!-- END BUBBLE -->
+
+        <hr class="featurette-divider">
+		  
+        <!-- START RIGHT --><!--
+
+        <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </div>
+          </div>
+  
+          <!-- END RIGHT --><!--
+		  
+        <hr class="featurette-divider">
+		  
+        <!-- START LEFT --><!--
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading" style="text-align:justify">titre</h2>
+            <p class="lead" style="text-align:justify">texte</p>
+          </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          </div>
+        </div>
+        <!-- END LEFT --><!--
+		  
+        <hr class="featurette-divider">
+        
+
+        <!-- /END THE FEATURETTES -->
+
+
+
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; ENSAE &middot; Dataviz Project &middot; Yousra, Flora, Simon, Mathis</p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="holder.min.js"></script>
+  </body>
+</html>
+
