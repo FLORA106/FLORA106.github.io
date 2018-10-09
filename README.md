@@ -1,5 +1,5 @@
-# Projet Dataviz
+# Projet Data Visualization
 
-# flora106.github.io
+# Le site est accessible au lien suivant : flora106.github.io
 
 
